@@ -1,0 +1,6 @@
+Name, Access time (ns), Cycle time (ns), Cache height (mm), Cache width(mm)
+cell_type_"itrs-lstp".cfg.txt, 2.97809,  3.41912, 0.404715, 1.31416
+cell_type_"lp-dram".cfg.txt, 1.5212,  2.14031, 0.205067, 0.752186
+cell_type_"itrs-lop".cfg.txt, 1.89554,  2.48572, 0.4047, 1.31416
+cell_type_"comm-dram".cfg.txt, 4.74213,  8.44734, 0.29724, 0.377668
+cell_type_"itrs-hp".cfg.txt, 0.988078,  1.59711, 0.404693, 1.31465

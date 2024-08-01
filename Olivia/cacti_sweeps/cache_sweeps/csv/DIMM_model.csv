@@ -1,0 +1,5 @@
+Name, Access time (ns), Cycle time (ns), Precharge Delay (ns), Activate Energy (nJ), Read Energy (nJ), Write Energy (nJ), Precharge Energy (nJ), Leakage Power Closed Page (mW), Leakage Power Open Page (mW), Leakage Power I/O (mW), Refresh power (mW), Cache height (mm), Cache width(mm)
+DIMM_model_"ALL".cfg.txt, 5.02937,  12.8915, 0, 0.0111722, 0.0447853, 0.0291295, 0.105185, 0.000306837, 0.000306929, 9.73572e-05, 0.00150189, 0.401884, 0.221343
+DIMM_model_"JUST_UDIMM".cfg.txt, 5.02937,  12.8915, 0, 0.0111722, 0.0447853, 0.0291295, 0.105185, 0.000306837, 0.000306929, 9.73572e-05, 0.00150189, 0.401884, 0.221343
+DIMM_model_"JUST_RDIMM".cfg.txt, 5.02937,  12.8915, 0, 0.0111722, 0.0447853, 0.0291295, 0.105185, 0.000306837, 0.000306929, 9.73572e-05, 0.00150189, 0.401884, 0.221343
+DIMM_model_"JUST_LRDIMM".cfg.txt, 5.02937,  12.8915, 0, 0.0111722, 0.0447853, 0.0291295, 0.105185, 0.000306837, 0.000306929, 9.73572e-05, 0.00150189, 0.401884, 0.221343
