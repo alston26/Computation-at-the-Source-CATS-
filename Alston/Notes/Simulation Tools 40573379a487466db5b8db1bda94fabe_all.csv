@@ -1,0 +1,212 @@
+﻿Name,URL,Description,Component described,Open source,Ran successfully,Inputs,Outputs,Comments
+Aladdin (2014),https://github.com/harvard-acc/ALADDIN,"Pre-RTL, power-performance simulator for fixed-function accelerators. There is also gem5 integration: https://github.com/harvard-acc/gem5-aladdin",,Yes,,,,
+AMESTER (2016),https://github.com/open-power/amester,"Automated Measurement of Systems for Temperature and Energy Reporting (AMESTER): software tool to remotely collect power, thermal, and performance metrics from IBM servers. ",,Yes,No,,,
+Bochs (1998),https://github.com/bochs-emu/Bochs/,Highly portable open source IA-32 (x86) PC emulator written in C++,x86 / CPU,Yes,,,,
+BookSim (2013),https://github.com/booksim/booksim2,A cycle-accurate interconnection network simulator,Interconnect,Yes,No,,,"
+
+"
+CACTI (2017),https://github.com/HewlettPackard/cacti,A simulator that uses SPICE to precisely model interconnect power (referred to as I/O power) in the memory system,"3D Stacked Memory, Caches, Interconnect, Memories",Yes,Yes,"Cache size, Block size, Associativity, Read-write port, Exclusive read port, Exclusive write port, Single ended read ports, UCA bank count, Technology, Burst length, Internal prefetch width, Data array cell type, Data array peripheral type, Tag array cell type, Tag array peripheral type, Output/input bus width, Operating temperature, Cache type, Page size, Burst depth, IO width, System frequency, Stacked die count, Partitioning granularity, TSV projection, Tag size, Access mode, Design objective, Deviate (percentage deviation from minimum value), NUCAdesign objective, NUCAdeviate, Optimize (ED or ED^2), Cache model, NUCA bank count, Wire signaling, Wire inside mat, Wire outside mat, Interconnect projection, Core count, Cache level, Add ECC, Print level, Print input parameters, Force cache config, Ndwl, Ndbl, Nspd, Ndcm, Ndsam1, and Ndsam2.","Best Memory configurations: BoB cap, num_channels, bandwidth,  (MHz) cost, energy (nJ) ",
+Cadence Spectre,https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation.html,"SPICE-class circuit simulator. Provides basic SPICE analyses and component models, and Verilog.",Circuit,,,,,
+CiMLoop (2024),https://github.com/mit-emze/cimloop,Full-stak CiM modeling tool described https://arxiv.org/pdf/2405.07259 (Accelergy/Timeloop),PIM systems,Yes,No,,,
+DAMOV (2021),https://github.com/CMU-SAFARI/DAMOV,Benchmark suite and simulation framework based on ZSim and Ramulator,PIM systems,Yes,No,,,
+DRAMPower (2022),https://github.com/tukl-msd/DRAMPower,An open source tool for fast and accurate DRAM power and energy estimation for DRAM memories.,DRAM,Yes,Yes,,,
+DRAMsim3 (2019),https://github.com/umd-memsys/DRAMsim3,"Cycle-accurate, thermal-capable DRAM Simulator. Integrations with Gem5, SST, ZSim",DRAM,Yes,Yes,"[dram_structure]
+protocol, bankgroups, banks_per_group, rows, columns, device_width, BL
+
+[timing]
+tCK, AL, CL, CWL, tRCD, tRP, tRAS, tRFC, tRFC2, tRFC4, tREFI, tRPRE, tWPRE, tRRD_S, tRRD_L, tWTR_S, tWTR_L, tFAW, tWR, tWR2, tRTP, tCCD_S, tCCD_L, tCKE, tCKESR, tXS, tXP, tRTRS
+
+[power]
+VDD, IDD0, IPP0, IDD2P, IDD2N, IDD3P, IDD3N, IDD4W, IDD4R, IDD5AB, IDD6x
+
+[system]
+channel_size, channels, bus_width, address_mapping, queue_structure, refresh_policy, row_buf_policy, cmd_queue_size, trans_queue_size
+
+[thermal]
+power_epoch_period, logic_bg_power, logic_max_power, chip_dim_x, chip_dim_y, amb_temp, mat_dim_x, mat_dim_y, bank_order, bank_layer_order
+
+[other]
+epoch_period, output_level","""Read request latency (cycles)"",
+""Refresh energy"",
+""Refresh-bank energy"",
+""Write energy"",
+""Read energy"",
+""Activation energy"",
+""SREF energy rank.0"",
+""SREF energy rank.1"",
+""Precharge standby energy rank.0"",
+""Precharge standby energy rank.1"",
+""Active standby energy rank.0"",
+""Active standby energy rank.1"",
+""Average read request latency (cycles)"",
+""Average request interarrival latency (cycles)"",
+""Total energy (pJ)"",
+""Average power (mW)"",
+""Average bandwidth""",
+DynamoRIO (2002),https://dynamorio.org,"A runtime code manipulation system that supports code transformations on any part of a program, while it executes",,,,,,
+Flexus,https://parsa.epfl.ch/simflex/flexus.html,A family of component-based C++ computer architecture simulators that build on Virtutech Simics' Micro-Architecture Interface (MAI) to enable full-system timing-accurate simulation of uni- and multiprocessor systems running unmodified commercial applications and operating systems.,,,,,,
+gem5 (2011),https://www.gem5.org/getting_started/,"Modular platform for computer-system architecture research, encompassing system-level architecture and processor microarchitecture.",Full-system,Yes,Yes,,"descriptions = [
+""Number of seconds simulated (Second)"",
+""Number of ticks simulated (Tick)"",
+""Number of ticks from beginning of simulation (restored from checkpoints and never reset) (Tick)"",
+""The number of ticks per simulated second ((Tick/Second))"",
+""Real time elapsed on the host (Second)"",
+""The number of ticks simulated per host second (ticks/s) ((Tick/Second))"",
+""Number of bytes of host memory used (Byte)"",
+""Number of instructions simulated (Count)"",
+""Number of ops (including micro ops) simulated (Count)"",
+""Simulator instruction rate (inst/s) ((Count/Second))"",
+""Simulator op (including micro ops) rate (op/s) ((Count/Second))"",
+""Clock period in ticks (Tick)"",
+""Voltage in Volts (Volt)"",
+""Number of cpu cycles simulated (Cycle)"",
+""CPI: cycles per instruction (core level) ((Cycle/Count))"",
+""IPC: instructions per cycle (core level) ((Count/Cycle))"",
+""Number of work items this cpu started (Count)"",
+""Number of work items this cpu completed (Count)"",
+""Number of instructions committed (thread level) (Count)"",
+""Number of ops (including micro ops) committed (thread level) (Count)"",
+""Number of instructions committed excluding NOPs or prefetches (Count)"",
+""Number of Ops (including micro ops) Simulated (Count)"",
+""CPI: cycles per instruction (thread level) ((Cycle/Count))"",
+""IPC: instructions per cycle (thread level) ((Count/Cycle))"",
+""Number of memory references committed (Count)"",
+""Number of float instructions (Count)"",
+""Number of integer instructions (Count)"",
+""Number of load instructions (Count)"",
+""Number of store instructions (Count)"",
+""Number of vector instructions (Count)""
+]",
+GPGPU-sim (2010),https://github.com/gpgpu-sim/gpgpu-sim_distribution,A cycle-level simulator modeling contemporary graphics processing units (GPUs) running GPU computing workloads written in CUDA or OpenCL,GPU,Yes,No,,,
+GPUWATTCH (2013),http://www.gpgpu-sim.org/gpuwattch/,A power model that modifies and extends the McPAT CPU power model simulator to model the power of contemporary GPGPUs,GPU,,No,,,
+HSPICE,https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html,An accurate circuit simulator. It offers foundries-certified MOS device models with state-of-the-art simulation and analysis algorithms,Circuit,,No,,,
+IMPICA (2016),https://github.com/CMU-SAFARI/IMPICA,"PIM simulator which models 3D-stacked memory within gem5. ",3D Stacked Memory,Yes,No,,,
+MacSim (2012),https://github.com/gthparch/macsim,"A heterogeneous architecture timing model simulator that simulates x86, ARM64, NVIDIA PTX and Intel GEN GPU instructions and can be configured as either a trace driven or execution-drive cycle level simulator.","GPU, x86 / CPU",Yes,No,,,
+Manifold (2015),https://github.com/gtcasl/manifold,"A Parallel Simulation Framework For Multicore Systems. It simulates physical phenomena including power, thermal and lifetime reliability models.",Multicore System,Yes,No,,,
+McPAT (2009),https://github.com/HewlettPackard/mcpat,"integrated power, area, and timing modeling framework for multicore and manycore architectures",Multicore System,Yes,Yes,,"Area
+Peak Dynamic 
+Subthreshold Leakage
+Gate Leakage 
+Runtime Dynamic",
+Micron Power Calculator,https://www.micron.com/sales-support/design-tools/dram-power-calculator,Models to approximate DRAM power requirements,DRAM,,,,,
+Multi2sim (2009),https://github.com/Multi2Sim/multi2sim,Simulator of CPUs and GPUs,"CPU, GPU",Yes,No,,,
+MultiPIM (2021),https://github.com/Systems-ShiftLab/MultiPIM,"Detailed and configurable multi-stack processing-in-memory simulator (https://www.notion.so/MultiPIM-2021-ec85a32d864d40c498812c0375f39347?pvs=21). Frontend (ZSim, can be replaced by Gem5, GPGPU-Sim, others) handles non-memory instructions and cache accesses. Backend (Ramulator-based) simulates actual latency of memory requests",PIM systems,Yes,No,,,
+NeuroSim (2019),https://github.com/neurosim/MLP_NeuroSim_V3.0,"A circuit-level macro model that estimates the area, latency, dynamic energy, and leakage power.",,Yes,Yes,Training set data,"metrics = [”Read Energy, Write Energy, Read Latency, Write Latency, ""Total SubArray (synaptic core) area (um^2)"",
+""Total Neuron (neuron peripheries) area (um^2)"",
+""Total area (um^2)"",
+""Leakage power of subArrayIH (mW)"",
+""Leakage power of subArrayHO (mW)"",
+""Leakage power of NeuronIH (mW)"",
+""Leakage power of NeuronHO (mW)"",
+""Total leakage power of subArray (mW)"",
+""Total leakage power of Neuron (mW)”]",
+NVM Explorer (2021),https://github.com/lpentecost/nvmexplorer,Framework for evaluating and comparing on-chip memory solutions including eNVM,Memories,Yes,Yes,"• List of experiment targets (opt_target)
+
+    ◦ ""ReadEDP""
+
+        ▪ Read Energy-Delay Product
+    ◦ ""ReadLatency""
+    ◦ ""WriteLatency""
+    ◦ ""WriteEDP""
+
+        ▪ Write Energy-Delay Product
+    ◦ ""WriteDynamicEnergy""
+    ◦ ""ReadDynamicEnergy""
+• Traffic
+
+    ◦ ""generic""
+    ◦ ""generic_write_buff""
+    ◦ ""dnn""
+    ◦ ""graph""
+    ◦ ""spec”","MemCellType, CellArea (F^2), CellAspectRatio, AccessType, AccessCMOSWidth (F), SRAMCellNMOSWidth (F), SRAMCellPMOSWidth (F), ReadMode, ReadVoltage (V), MinSenseVoltage (mV), Stitching, MemoryCellInputFile, DesignTarget, DeviceRoadmap, LocalWireType, LocalWireRepeaterType, LocalWireUseLowSwing, GlobalWireType, GlobalWireRepeaterType, GlobalWireUseLowSwing, Routing, InternalSensing, Temperature (K), BufferDesignOptimization, ProcessNode, OptimizationTarget, WordWidth (bit), Capacity (MB), Benchmark Name, Read Accesses, Write Accesses, Total Dynamic Read Power (mW), Total Dynamic Write Power (mW), Total Power, Total Dynamic Read Energy (mJ), Total Dynamic Write Energy (mJ), Total Read Latency (ms), Total Write Latency (ms), Read BW Util, Write BW Util, Area (mm^2), Area Efficiency (percent), Read Latency (ns), Write Latency (ns), Read Energy (pJ), Write Energy (pJ), Leakage Power (mW), Bits Per Cell, ResistanceOn (ohm), ResistanceOff (ohm), ReadPower (uW), ResetMode, ResetCurrent (uA), ResetPulse (ns), ResetEnergy (pJ), SetMode, SetCurrent (uA), SetPulse (ns), SetEnergy (pJ), ResistanceOnAtSetVoltage (ohm), ResistanceOffAtSetVoltage (ohm), ResistanceOnAtResetVoltage (ohm), ResistanceOffAtResetVoltage (ohm), ResistanceOnAtReadVoltage (ohm), ResistanceOffAtReadVoltage (ohm), ResistanceOnAtHalfResetVoltage (ohm), CapacitanceOn (F), CapacitanceOff (F), ResetVoltage (V), SetVoltage (V), ReadEnergy (pJ).",
+NVMain (2012),https://github.com/SEAL-UCSB/NVmain,Architecture-level main memory simulator for emerging non-volatile memories (https://ieeexplore.ieee.org/abstract/document/6296505),Memories,Yes,No,,,
+NVSim (2012),https://github.com/SEAL-UCSB/NVSim,"Performance, energy, and area estimation tool for NVM",Memories,Yes,Yes,"DesignTarget
+CacheAccessMode
+EnablePruning
+ProcessNode
+Capacity
+WordWidth
+DeviceRoadmap
+LocalWireType
+LocalWireRepeaterType
+LocalWireUseLowSwing
+GlobalWireType
+GlobalWireRepeaterType
+GlobalWireUseLowSwing
+Routing
+InternalSensing
+MemoryCellInputFile
+Temperature
+BufferDesignOptimization
+ForceBank
+ForceMat
+ForceMuxSenseAmp
+ForceMuxOutputLev1
+ForceMuxOutputLev2","metrics = [
+""Total Area (um^2)"",
+""Mat Area (um^2) and percentage"",
+""Subarray Area (um^2) and percentage"",
+""Area Efficiency (percentage)"",
+""Read Latency (ps)"",
+""H-Tree Latency (ps)"",
+""Mat Latency (ps)"",
+""Predecoder Latency (ps)"",
+""Subarray Latency (ps)"",
+""Row Decoder Latency (ps)"",
+""Bitline Latency (ps)"",
+""Senseamp Latency (ps)"",
+""Mux Latency (ps)"",
+""Precharge Latency (ps)"",
+""Write Latency (ps)"",
+""H-Tree Latency (Write) (ps)"",
+""Mat Latency (Write) (ps)"",
+""Predecoder Latency (Write) (ps)"",
+""Subarray Latency (Write) (ps)"",
+""Row Decoder Latency (Write) (ps)"",
+""Charge Latency (ps)"",
+""Read Bandwidth (GB/s)"",
+""Write Bandwidth (GB/s)"",
+""Read Dynamic Energy (pJ)"",
+""H-Tree Dynamic Energy (Read) (pJ)"",
+""Mat Dynamic Energy (Read) (pJ per mat)"",
+""Predecoder Dynamic Energy (Read) (pJ)"",
+""Subarray Dynamic Energy (Read) (pJ per active subarray)"",
+""Row Decoder Dynamic Energy (Read) (pJ)"",
+""Mux Decoder Dynamic Energy (Read) (pJ)"",
+""Senseamp Dynamic Energy (Read) (pJ)"",
+""Mux Dynamic Energy (Read) (pJ)"",
+""Precharge Dynamic Energy (Read) (pJ)"",
+""Write Dynamic Energy (pJ)"",
+""H-Tree Dynamic Energy (Write) (pJ)"",
+""Mat Dynamic Energy (Write) (pJ per mat)"",
+""Predecoder Dynamic Energy (Write) (pJ)"",
+""Subarray Dynamic Energy (Write) (pJ per active subarray)"",
+""Row Decoder Dynamic Energy (Write) (pJ)"",
+""Mux Decoder Dynamic Energy (Write) (pJ)"",
+""Mux Dynamic Energy (Write) (pJ)"",
+""Leakage Power (mW)"",
+""H-Tree Leakage Power (pW)"",
+""Mat Leakage Power (mW per mat)""
+]
+",
+Orion (2018),github.com/Aayush-Ankit/RESPARC-plc/blob/master/orion2,"A power-performance interconnection network simulator that is capable of providing detailed power characteristics, in addition to performance characteristics, to enable rapid power-performance tradeoffs at the architectural-level",Interconnect,Yes,No,,,
+PAPI (Performance Application Programming Interface) (2001),https://github.com/icl-utk-edu/papi,"A universal interface and methodology for gathering performance counter information from diverse hardware and software components including major CPUs, GPUs, accelerators, interconnects, I/O systems, power interfaces, and even virtual cloud environments. ","CPU, GPU, Interconnect, Memories",Yes,,,,
+Pcmsim (2022),https://github.com/harrylee365/pcmcsim_public,An event-driven simulator that accurately simulates a modern phase-chanage memory controller (PCMC),Memory Controller,Yes,Yes,"There are two different memory inputs, PCM and DRAM. For each, there are different inputs. However, PCM has many more inputs than DRAM and includes parameter data from CACTI. Wear Leveling Techniqies are also included.",Primarily Read and Write Latency,
+Pimulator (2022),https://github.com/hplp/PiMulator/wiki/Getting-started,"PiMulator is a modular, parameterizable, FPGA synthesizable soft PiM model suitable for prototyping and rapid evaluation of Processing-in-Memory architectures.",PIM systems,Yes,Yes,,,
+Pin (2007),https://www.intel.com/content/www/us/en/developer/articles/tool/pin-a-dynamic-binary-instrumentation-tool.html,dynamic binary instrumentation framework for IA-32 and x86-64 instruction-set architectures,x86 / CPU,,,,,
+PrimeTime,https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html,"Allows fast, memory-efficient scalar and multicore computing, distributed multi-scenario analysis and ECO fixing using POCV and variation-aware modeling",,,,,,
+Rambus Power Model (2016),https://www.rambus.com/energy/,DRAM Power Model,DRAM,,,,,
+Ramulator (2015),https://github.com/CMU-SAFARI/ramulator,Fast and cycle-accurate DRAM simulator,DRAM,Yes,Yes,,"""Total active cycles for level _0"", ""The sum of read and write requests that are served in this DRAM element per memory cycle for level _0"", ""The average of read and write requests that are served in this DRAM element per memory cycle for level _0"", ""Total active cycles for level _0_0"", “The sum of read and write requests that are served in this DRAM element per memory cycle for level _0_0"", ""The average of read and write requests that are served in this DRAM element per memory cycle for level _0_0"", ""The total byte of read transaction per channel"", ""The total byte of write transaction per channel"", ""Number of row hits per channel per core"", ""Number of row misses per channel per core"", ""Number of row conflicts per channel per core"", ""Number of row hits for read requests per channel per core"", ""Number of row misses for read requests per channel per core"", ""Number of row conflicts for read requests per channel per core"", ""Number of row hits for write requests per channel per core"", ""Number of row misses for write requests per channel per core"", ""Number of row conflicts for write requests per channel per core"", ""Number of useless activations. E.g, ACT -> PRE w/o RD or WR"", ""The average memory latency cycles (in memory time domain) per request for all read requests in this channel"", ""The memory latency cycles (in memory time domain) sum for all read requests in this channel"", ""Average of read and write queue length per memory cycle per channel."", ""Sum of read and write queue length per memory cycle per channel."", ""Read queue length average per memory cycle per channel."", ""Read queue length sum per memory cycle per channel."", ""Write queue length average per memory cycle per channel."", ""Write queue length sum per memory cycle per channel."", ""record read hit count for this core when it reaches request limit or to the end"", ""record_read_miss count for this core when it reaches request limit or to the end"", ""record read conflict count for this core when it reaches request limit or to the end"", ""record write hit count for this core when it reaches request limit or to the end"", ""record write miss count for this core when it reaches request limit or to the end"", ""record write conflict for this core when it reaches request limit or to the end"", ""Number of bytes in simulated DRAM"", ""Number of DRAM cycles simulated"", ""Number of incoming requests to DRAM"", ""Number of incoming read requests to DRAM per core"", ""Number of incoming write requests to DRAM per core"", ""The total number of cycles that the DRAM part is active (serving R/W)"", ""Number of incoming requests to each DRAM channel"", ""Number of incoming read requests to each DRAM channel"", ""The number of times that physical page replacement happens."", ""The theoretical maximum bandwidth (Bps)"", ""Sum of read/write queue length"", ""Sum of read queue length"", ""Sum of write queue length"", ""Average of read/write queue length per memory cycle"", ""Average of read queue length per memory cycle"", ""Average of write queue length per memory cycle"", ""record read requests for this core when it reaches request limit or to the end"", ""record write requests for this core when it reaches request limit or to the end"", ""cache read miss count"", ""cache write miss count"", ""cache total miss count"", ""number of evict from this level to lower level"", ""cache read access count"", ""cache write access count"", ""cache total access count"", ""cache mshr hit count"", ""cache mshr not available count"", ""cache set not available"", ""cpu cycle number"", ""memory access cycles in memory time domain"", ""cpu instruction number”",
+riscvOVPsim (2022),https://github.com/riscv-ovpsim/imperas-riscv-tests,https://www.imperas.com/riscvovpsim-free-imperas-risc-v-instruction-set-simulator,,Yes,No,,,
+RTSim (2019),,Cycle-accurate simulator for raetrack memories (RTMs) (https://ieeexplore.ieee.org/abstract/document/8642352),Memories,,,,,
+SimFlex (2005),https://rti.etf.bg.ac.rs/rti/ri3aor/Simulators/simflex.html,Flexus and SMARTS. Flexus is a simulator framework which allows full-system simulation using component interface models.,Full-system,No,,,,
+Simics (Intel),https://www.intel.com/content/www/us/en/developer/articles/tool/simics-simulator.html,Full-system simulator for complex electronic systems,Full-system,,Yes,,,
+Snipersim (2014),https://github.com/snipersim/snipersim,"A next generation parallel, high-speed and accurate x86 simulator. This multi-core simulator is based on the interval core model and the Graphite simulation infrastructure","Multicore System, x86 / CPU",Yes,Yes,,,
+SPICE,,"A computer simulation and modeling program used by engineers to mathematically predict the behavior of electronics circuits. ",Circuit,,,,,
+Structural Simulation Toolkit (SST) (2009),https://github.com/sstsimulator,A fully modular simulator that enables extensive exploration of an individual system parameter without the need for intrusive changes to the simulator. It integrates a parallel simulation environment based on MPI.,,Yes,,,,
+Threshold Logic Synthesizer (2004),https://bibtex.github.io/DATE-v2-2004-ZhangGZJ.html,"Asynthesis tool designed to create optimized threshold logic networks for multi-output Boolean functions, leveraging nanotechnologies like resonant tunneling diodes (RTD) and quantum cellular automata (QCA).",,,,,,
+uPIMulator (2024),https://github.com/VIA-Research/uPIMulator/blob/main/,Cycle-level performance simulator designed for general-purpose PIM systems (targeting UPMEM),PIM systems,Yes,,,,
+USIMM (2014),https://github.com/pranith/usimm,"It reads in application traces, models the progression of application instructions through the reorder buffers of a multi-core processor, and manages the memory controller read/write queues.",,Yes,No,,,
+VaultSim,https://sst-simulator.org/sst-docs/docs/elements/vaultsim/intro,Package in SST for simulating 3D stacked memory.,3D Stacked Memory,,,,,
+ZSim (2013),https://github.com/s5z/zsim?tab=readme-ov-file,Fast and scalable x86-64 multicore simulator,Multicore System,Yes,,,,
+,,,,,,,,
